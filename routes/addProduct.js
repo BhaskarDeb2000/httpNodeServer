@@ -10,11 +10,10 @@ const products = [];
 addProduct.use(bodyParser.urlencoded({ extended: true }));
 
 addProduct.get(`/add-product`, (req, res, next) => {
-  res.render("addProduct", { title: "Add Product" });
+  res.render("addProduct", { title: "Add Product", path: "/add-Product" });
 });
 
 addProduct.post("/added-products", (req, res, next) => {
-  res.render("addProduct", { title: "Added Products" });
   products.push({ Title: req.body.productName });
   res.redirect("/");
 });
