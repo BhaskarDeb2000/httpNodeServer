@@ -1,0 +1,19 @@
+extends layout/mainLayout.pug 
+block content 
+    main
+      form.productForm(action="/confirmedSignUp", method="POST")
+       .formControl
+          h1
+            label(for="userName") UserName:
+          h1
+            input(type="text", name="userName", id="userName")
+          h1
+            label(for="password") Password:
+          h1
+            input(type="text", name="password", id="password")
+          h1
+            label(for="confirmPassword") Confirm Password:
+          h1
+            input(type="text", name="confirmPassword", id="confirmPassword")
+
+            button(type="submit") Sign Up

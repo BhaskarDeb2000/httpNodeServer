@@ -1,0 +1,9 @@
+extends layout/mainLayout.pug 
+block content 
+      form.productForm(action="/added-products", method="POST")
+        div.formControl
+          h1
+            label(for="inputProduct") Input your Product here:
+          h1
+            input(type="text", name="productName", id="productName")
+        button(type="submit") Add Product
