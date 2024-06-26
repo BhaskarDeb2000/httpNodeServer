@@ -6,7 +6,7 @@ const rootDir = require("../helpers/path");
 const cartRoute = express.Router();
 
 cartRoute.get(`/cart`, (req, res, next) => {
-  res.sendFile(path.join(rootDir, `views`, "cart.html")); //builds a path automatically based on Operating system
+  res.render("cart");
 });
 
 module.exports = cartRoute;

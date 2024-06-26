@@ -2,6 +2,9 @@ const http = require("http");
 const express = require("express");
 
 const app = express();
+app.set("view engine", "pug"); //compiles dynamic templates with the pug engine
+app.set("views", "views"); //directory to find the templates
+
 const server = http.createServer(app);
 
 const addProduct = require("./routes/addProduct");

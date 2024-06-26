@@ -1,0 +1,39 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title Add Product
+    link(rel="stylesheet", href="/css/products.css")
+
+  body.body
+    header.main-header
+      nav.main-header_nav
+        ul.main-header_itemList
+          li.main-header_listItem
+            a(href="/") Home
+          li.main-header_listItem
+            a.active(href="add-product") Add Product
+          li.main-header_listItem
+            a(href="cart") Cart
+          li.main-header_listItem
+            a(href="signUp") Sign Up
+
+    main
+      form.productForm(action="/confirmedSignUp", method="POST")
+       .formControl
+          h1
+            label(for="userName") UserName:
+          h1
+            input(type="text", name="userName", id="userName")
+          h1
+            label(for="password") Password:
+          h1
+            input(type="text", name="password", id="password")
+          h1
+            label(for="confirmPassword") Confirm Password:
+          h1
+            input(type="text", name="confirmPassword", id="confirmPassword")
+
+            button(type="submit") Sign Up

@@ -6,7 +6,7 @@ const rootDir = require("../helpers/path");
 const errRoute = express.Router();
 
 errRoute.use((req, res, next) => {
-  res.status(404).sendFile(path.join(rootDir, "views", "404Page.html"));
+  res.status(404).render("404Page");
 });
 
 module.exports = errRoute;

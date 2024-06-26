@@ -8,7 +8,8 @@ const ShopRoute = express.Router();
 
 ShopRoute.get(`/`, (req, res, next) => {
   console.log(addProduct.products);
-  res.sendFile(path.join(rootDir, `views`, "home.html")); //builds a path automatically based on Operating system
+  const products = addProduct.products;
+  res.render("home", { prods: products, docTitle: `Home Page` });
 });
 
 module.exports = ShopRoute;

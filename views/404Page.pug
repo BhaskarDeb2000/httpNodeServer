@@ -1,0 +1,27 @@
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title 404 Not Found
+    link(rel="stylesheet", href="/css/404Page.css")
+  body.body
+    header.main-header
+      nav.main-header_nav
+        ul.main-header_itemList
+          li.main-header_listItem
+            a(href="/") Home
+          li.main-header_listItem
+            a.active(href="add-product") Add Product
+          li.main-header_listItem
+            a(href="cart") Cart
+          li.main-header_listItem
+            a(href="signUp") Sign Up
+    p
+      h1 404 Error
+      b
+        h2 error:
+        p "Page Not Found"
+      br
+      b
+        h2  message:
+        p "Invalid URL"
