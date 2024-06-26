@@ -67,6 +67,7 @@ main {
 
 button {
   font: inherit;
+  font-size: 20px;
   color: rgb(224, 224, 224);
   border-color: 1px rgb(73, 73, 45);
   background-color: rgb(56, 67, 77);
@@ -80,12 +81,13 @@ button {
 button:hover,
 button:active {
   background-color: aquamarine;
+
 }
 
 .productForm {
   width: 20rem;
   max-width: 90%;
-  margin: auto;
+  margin: 50px auto;
 }
 
 form {

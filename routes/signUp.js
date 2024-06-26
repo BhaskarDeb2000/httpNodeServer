@@ -9,7 +9,7 @@ const signUpRoute = express.Router();
 
 signUpRoute.use(bodyParser.urlencoded({ extended: true }));
 signUpRoute.get(`/signUp`, (req, res, next) => {
-  res.render("signUp");
+  res.render("signUp", { title: "Sign Up" });
 });
 
 signUpRoute.post("/confirmedSignUp", (req, res) => {
