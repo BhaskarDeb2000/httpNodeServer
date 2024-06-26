@@ -10,7 +10,8 @@ adminRoute.use(bodyParser.urlencoded({ extended: true }));
 
 adminRoute.post("/added-products", (req, res, next) => {
   console.log(req.body);
-  res.sendFile(path.join(rootDir, "views", "adminProduct.html"));
+  res.sendFile(path.join(rootDir, "views", "adminForm.html"));
+  res.redirect("/cart");
 });
 
 module.exports = adminRoute;
