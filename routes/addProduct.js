@@ -4,11 +4,21 @@ const bodyParser = require("body-parser");
 
 const rootDir = require("../helpers/path");
 
-const adminRoute = express.Router();
+const addProduct = express.Router();
+const products = [];
 
-adminRoute.use(bodyParser.urlencoded({ extended: true }));
+addProduct.use(bodyParser.urlencoded({ extended: true }));
 
-adminRoute.get(`/add-product`, (req, res, next) => {
+addProduct.get(`/add-product`, (req, res, next) => {
   res.sendFile(path.join(rootDir, "views", "addProduct.html"));
 });
-module.exports = adminRoute;
+
+addProduct.post("/added-products", (req, res, next) => {
+  res.sendFile(path.join(rootDir, "views", "addProduct.html"));
+  products.push({ Title: req.body.productName });
+  res.redirect("/");
+});
+// module.exports = adminRoute;
+
+exports.addProduct = addProduct;
+exports.products = products;
