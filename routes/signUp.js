@@ -10,7 +10,6 @@ const signUpRoute = express.Router();
 signUpRoute.use(bodyParser.urlencoded({ extended: true }));
 signUpRoute.get(`/signUp`, (req, res, next) => {
   res.sendFile(path.join(rootDir, `views`, "signUp.html")); //builds a path automatically based on Operating system
-  console.log("Working");
 });
 
 signUpRoute.post("/confirmedSignUp", (req, res) => {
