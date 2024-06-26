@@ -6,7 +6,7 @@ const rootDir = require("../helpers/path");
 const cartRoute = express.Router();
 
 cartRoute.get(`/cart`, (req, res, next) => {
-  res.render("cart");
+  res.render("cart", { title: "Shopping Cart" });
 });
 
 module.exports = cartRoute;
