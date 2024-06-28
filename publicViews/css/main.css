@@ -99,5 +99,41 @@ form {
   border: 1px solid rgb(194, 194, 194);
   border-radius: 10px;
   background-color: rgb(255, 255, 255);
-  box-shadow: 0 0 10px rgba(0, 0, 0);
+  box-shadow: 0 0 10px rgb(0, 0, 0);
+}
+
+.product-item {
+  width: 20rem;
+  max-width: 50%;
+  font: inherit;
+  font-size: 20px;
+  color: rgb(224, 224, 224);
+  border-color: 5px rgb(230, 15, 51);
+  background-color: rgb(66, 72, 79);
+  cursor: pointer;
+  padding: 2%;
+  border-radius: 5px;
+  display: inline-block;
+  margin: 20px 10px;
+
+}
+
+.product__title {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.product__price {
+  text-align: center;
+  color: #d9d8d8;
+  margin-bottom: 0.5rem;
+}
+
+.product__description {
+  text-align: center;
+}
+
+.card__image {
+  justify-content: center;
+  display: grid
 }
